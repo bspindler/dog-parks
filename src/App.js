@@ -1,8 +1,27 @@
 import React from "react";
 import "./App.css";
+import Form from "./components/Form";
+
+// let responseData;
+// let lat;
+// let lng;
 
 function App() {
-  return <h1>Initial commit</h1>;
+  return (
+    <div id="dog-park">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6">
+            <Form />
+          </div>
+          <div className="col-md-6">
+            <h2>Results</h2>
+            <div id="parkResults"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default App;
