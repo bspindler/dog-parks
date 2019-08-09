@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/dog-parks/static/css/main.f18af252.chunk.css",
+    "main.js": "/dog-parks/static/js/main.6d58fe4e.chunk.js",
+    "main.js.map": "/dog-parks/static/js/main.6d58fe4e.chunk.js.map",
+    "runtime~main.js": "/dog-parks/static/js/runtime~main.2427065a.js",
+    "runtime~main.js.map": "/dog-parks/static/js/runtime~main.2427065a.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/dog-parks/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.13f82395.chunk.js": "/dog-parks/static/js/2.13f82395.chunk.js",
+    "static/js/2.13f82395.chunk.js.map": "/dog-parks/static/js/2.13f82395.chunk.js.map",
+    "index.html": "/dog-parks/index.html",
+    "precache-manifest.ef356d674c840fce8c9180a8a0566e5c.js": "/dog-parks/precache-manifest.ef356d674c840fce8c9180a8a0566e5c.js",
+    "service-worker.js": "/dog-parks/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "/dog-parks/static/css/2.22a7d4ef.chunk.css.map",
+    "static/css/main.f18af252.chunk.css.map": "/dog-parks/static/css/main.f18af252.chunk.css.map"
+  }
+}
