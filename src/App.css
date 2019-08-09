@@ -41,7 +41,7 @@ body #root {
 body #dog-park .row {
   padding: 20px;
   background: rgba(0, 120, 140, 0.85);
-  border-radius: 10px;
+  border-radius: 0.5rem;
   border: 1px solid #ccc;
   color: #fff !important;
   overflow-y: scroll;

@@ -121,6 +121,7 @@ class Form extends React.Component {
   render() {
     return (
       <div>
+        <h1>Dog Park Locator</h1>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label htmlFor="zipCode">Zip Code</label>

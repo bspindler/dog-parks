@@ -15,7 +15,7 @@ function App() {
             <Form />
           </div>
           <div className="col-md-6">
-            <h2>Results</h2>
+            <h1>Results</h1>
             <div id="parkResults"></div>
           </div>
         </div>
