@@ -1,22 +1,29 @@
 import React from "react";
+import classNames from "classnames";
 import "./App.css";
 import Form from "./components/Form";
-
-// let responseData;
-// let lat;
-// let lng;
 
 function App() {
   return (
     <div id="dog-park">
       <div className="container">
         <div className="row">
-          <div className="col-md-6">
+          <div
+            className={classNames({
+              "col-md-12": !true,
+              "col-md-6": true
+            })}
+          >
             <Form />
           </div>
-          <div className="col-md-6">
+          <div
+            className={classNames({
+              "d-none": !true,
+              "col-md-6": true
+            })}
+          >
             <h1>Results</h1>
-            <div id="parkResults"></div>
+            <div id="parkResults" />
           </div>
         </div>
       </div>

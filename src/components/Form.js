@@ -14,6 +14,7 @@ const FOUR_SQUARE_CLIENT_SECRET =
   "client_secret=1MK3A1HIJVPEX3DVBD2ICEOAUGXIQWUYUCIDVWU2OHPWBITO";
 const FOUR_SQUARE_VERSION = "v=20180323";
 const FOUR_SQUARE_QUERY = "query=dog+park";
+const GOOGLE_API_KEY = "AIzaSyC1_ggHfqAiYngq0Jvro7eUHyXBCCN3mSY";
 
 class Form extends React.Component {
   constructor() {
@@ -45,14 +46,12 @@ class Form extends React.Component {
           // Starter code for Dog park locator
           fetch(
             "https://maps.googleapis.com/maps/api/geocode/json" +
-              "?key=AIzaSyC1_ggHfqAiYngq0Jvro7eUHyXBCCN3mSY" +
+              ("?key=" + GOOGLE_API_KEY) + 
               ("&address=" + this.state.zip)
           ).then(function(response) {
             response.json().then(function(data) {
-              console.log(data.results[0].geometry.location);
               lat = data.results[0].geometry.location.lat;
               lng = data.results[0].geometry.location.lng;
-              console.log(limit);
               fetch(
                 "https://api.foursquare.com/v2/venues/search" + // Foursquare Places API - *Search* endpoint
                   ("?" + FOUR_SQUARE_CLIENT_ID) +
@@ -86,9 +85,8 @@ class Form extends React.Component {
                     dogParks = dogParks.sort((a, b) =>
                       parseFloat(a.distance) > parseFloat(b.distance) ? 1 : -1
                     );
-                    console.log(dogParks);
                     const dogParkLocations = dogParks.map(dogParks => (
-                      <li>
+                      <li key={dogParks.name}>
                         {dogParks.name}, {dogParks.address[0]},{" "}
                         {dogParks.address[1]}
                         <br />
@@ -162,8 +160,6 @@ class Form extends React.Component {
             </button>
           </div>
         </form>
-
-        {/* <p>Hello {this.state.zip}!</p> */}
       </div>
     );
   }
