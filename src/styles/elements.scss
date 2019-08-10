@@ -1,6 +1,13 @@
 @import "colors";
 
 body {
+  p {
+    margin-bottom: 0.25rem;
+    &:last-child {
+      margin: 0;
+    }
+  }
+
   button {
     &.btn {
       background: $purple;
@@ -19,9 +26,12 @@ body {
   }
 
   ul {
-      padding: 0;
-      li {
-        list-style-type: none;
-      }
+    padding: 0;
+    margin: 1rem 0rem;
+    li {
+      list-style-type: none;
+      padding: 0.5rem 0rem;
+      border-bottom: 0.125rem solid $purple;
+    }
   }
 }

@@ -19,7 +19,7 @@ const GOOGLE_API_KEY = "AIzaSyC1_ggHfqAiYngq0Jvro7eUHyXBCCN3mSY";
 class Form extends React.Component {
   sendData = () => {
     this.props.appCallback(true);
-  }
+  };
   constructor() {
     super();
     this.state = {
@@ -50,7 +50,7 @@ class Form extends React.Component {
           // Starter code for Dog park locator
           fetch(
             "https://maps.googleapis.com/maps/api/geocode/json" +
-              ("?key=" + GOOGLE_API_KEY) + 
+              ("?key=" + GOOGLE_API_KEY) +
               ("&address=" + this.state.zip)
           ).then(function(response) {
             response.json().then(function(data) {
@@ -91,10 +91,13 @@ class Form extends React.Component {
                     );
                     const dogParkLocations = dogParks.map(dogParks => (
                       <li key={dogParks.name}>
-                        {dogParks.name}, {dogParks.address[0]},{" "}
-                        {dogParks.address[1]}
-                        <br />
-                        {dogParks.distance} miles away
+                        <p>
+                          <strong>{dogParks.name}</strong>, {dogParks.distance}{" "}
+                          miles away
+                        </p>
+                        <p>
+                          {dogParks.address[0]}, {dogParks.address[1]}
+                        </p>
                       </li>
                     ));
 
