@@ -17,6 +17,9 @@ const FOUR_SQUARE_QUERY = "query=dog+park";
 const GOOGLE_API_KEY = "AIzaSyC1_ggHfqAiYngq0Jvro7eUHyXBCCN3mSY";
 
 class Form extends React.Component {
+  sendData = () => {
+    this.props.appCallback(true);
+  }
   constructor() {
     super();
     this.state = {
@@ -42,6 +45,7 @@ class Form extends React.Component {
       if (this.state.limit) {
         limit = this.state.limit;
         if (this.state.radius >= 1 && this.state.radius <= 100) {
+          this.sendData();
           radius = this.state.radius;
           // Starter code for Dog park locator
           fetch(
