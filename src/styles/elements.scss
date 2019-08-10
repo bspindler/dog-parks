@@ -4,15 +4,24 @@ body {
   button {
     &.btn {
       background: $purple;
+      color: $white;
       border: 1px solid transparent;
       transition: $transition;
       &:hover {
         background: $purple;
+        color: $white;
         border: 1px solid transparent;
         -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
         box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
       }
     }
+  }
+
+  ul {
+      padding: 0;
+      li {
+        list-style-type: none;
+      }
   }
 }

@@ -6,9 +6,14 @@ import Form from "./components/Form";
 class App extends React.Component {
   state = { submitted: "" }
 
+  reset() {
+    window.location.reload();
+  }
+
   callBackFunction = formSubmitted => {
     this.setState({ submitted: formSubmitted });
   };
+
   render() {
     return (
       <div id="dog-park">
@@ -17,7 +22,7 @@ class App extends React.Component {
             <div
               className={classNames({
                 "col-md-12": !this.state.submitted,
-                "col-md-6": this.state.submitted
+                "d-none": this.state.submitted
               })}
             >
               <Form appCallback={this.callBackFunction} />
@@ -25,10 +30,10 @@ class App extends React.Component {
             <div
               className={classNames({
                 "d-none": !this.state.submitted,
-                "col-md-6": this.state.submitted
+                "col-md-12": this.state.submitted
               })}
             >
-              <h1>Results</h1>
+              <h1>Results</h1> <button className="btn" onClick={this.reset}>Reset</button>
               <div id="parkResults" />
             </div>
           </div>

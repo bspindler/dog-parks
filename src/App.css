@@ -1,14 +1,22 @@
 body button.btn {
   background: #1d1160;
+  color: #fff;
   border: 1px solid transparent;
   transition: all 0.5s ease;
 }
 body button.btn:hover {
   background: #1d1160;
+  color: #fff;
   border: 1px solid transparent;
   -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+}
+body ul {
+  padding: 0;
+}
+body ul li {
+  list-style-type: none;
 }
 
 body {
