@@ -47,9 +47,9 @@ body {
   display: -webkit-flex;
   display: flex;
   align-items: flex-end;
-  background: url(https://everfi-adminifi.s3.amazonaws.com/production/mediafi/media/3028fee7-1e76-423d-ad45-273a31f7f2cd_IMG_6366.jpeg);
+  background: url(./images/nike.jpg);
   background-size: cover;
-  background-position: 55% 50%;
+  background-position: 60% 50%;
   padding-bottom: 20px;
 }
 body #root {
