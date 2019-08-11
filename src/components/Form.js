@@ -89,6 +89,7 @@ class Form extends React.Component {
                     dogParks = dogParks.sort((a, b) =>
                       parseFloat(a.distance) > parseFloat(b.distance) ? 1 : -1
                     );
+                    console.log(dogParks);
                     const dogParkLocations = dogParks.map(dogParks => (
                       <li key={dogParks.name}>
                         <p>
@@ -96,7 +97,7 @@ class Form extends React.Component {
                           miles away
                         </p>
                         <p>
-                          {dogParks.address[0]}, {dogParks.address[1]}
+                          {dogParks.address[0]}, {dogParks.address[1]}, {dogParks.address[2]}
                         </p>
                       </li>
                     ));
