@@ -71,18 +71,21 @@ class Form extends React.Component {
                   response.json().then(function(data) {
                     responseData = data.response.venues;
                     responseData.forEach(function(element) {
-                      console.log(
-                        element.name +
-                          ": " +
-                          (element.location.distance / 1609.344).toFixed(2) +
-                          " miles away."
-                      );
                       let park = {
                         name: element.name,
                         address: element.location.formattedAddress,
                         distance: (
                           element.location.distance / 1609.344
-                        ).toFixed(2)
+                        ).toFixed(2),
+                        latitude: element.location.lat,
+                        longitude: element.location.lng,
+                        link:
+                          "//www.google.com/maps/@" +
+                          element.location.lat +
+                          "," +
+                          element.location.lng +
+                          ",15z",
+                        title: "Link to " + element.name + " on Google Maps"
                       };
                       dogParks.push(park);
                     });
@@ -92,13 +95,21 @@ class Form extends React.Component {
                     console.log(dogParks);
                     const dogParkLocations = dogParks.map(dogParks => (
                       <li key={dogParks.name}>
+                        {/* <a
+                          href={dogParks.link}
+                          title={dogParks.title}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        > */}
                         <p>
                           <strong>{dogParks.name}</strong>, {dogParks.distance}{" "}
                           miles away
                         </p>
                         <p>
-                          {dogParks.address[0]}, {dogParks.address[1]}, {dogParks.address[2]}
+                          {dogParks.address[0]}, {dogParks.address[1]},{" "}
+                          {dogParks.address[2]}
                         </p>
+                        {/* </a> */}
                       </li>
                     ));
 
