@@ -37,8 +37,11 @@ body {
     border-radius: 10px;
     border: 1px solid $grey;
     color: $white !important;
-    overflow-y: scroll;
     max-height: 25rem;
+
+    &.overflowY {
+      overflow-y: scroll;
+    }
 
     &#resultsHeader {
       display: -webkit-box;

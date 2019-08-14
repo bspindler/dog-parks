@@ -18,7 +18,10 @@ class App extends React.Component {
     return (
       <div id="dog-park">
         <div className="container">
-          <div className="row">
+          <div className={classNames({
+                "row": true,
+                "overflowY": this.state.submitted
+              })}>
             <div
               className={classNames({
                 "col-md-12": !this.state.submitted,

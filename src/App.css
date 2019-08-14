@@ -61,8 +61,10 @@ body #dog-park .row {
   border-radius: 10px;
   border: 1px solid #ccc;
   color: #fff !important;
-  overflow-y: scroll;
   max-height: 25rem;
+}
+body #dog-park .row.overflowY {
+  overflow-y: scroll;
 }
 body #dog-park .row#resultsHeader {
   display: -webkit-box;
