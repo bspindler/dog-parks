@@ -144,7 +144,7 @@ class Form extends React.Component {
             <label htmlFor="zipCode">Zip Code</label>
             <input
               className="form-control"
-              id="zipCodeImput"
+              id="zipCode"
               aria-describedby="zipCode"
               value={this.state.zip}
               onChange={event => this.changeZip(event)}
@@ -155,7 +155,7 @@ class Form extends React.Component {
             <label htmlFor="radius">Radius (mi.)</label>
             <input
               className="form-control"
-              id="radiusInput"
+              id="radius"
               aria-describedby="radius"
               value={this.state.radius}
               onChange={event => this.changeRadius(event)}
@@ -166,7 +166,7 @@ class Form extends React.Component {
             <label htmlFor="limit">Maximum Number of Results</label>
             <input
               className="form-control"
-              id="limitInput"
+              id="limit"
               aria-describedby="limit"
               value={this.state.limit}
               onChange={event => this.changeLimit(event)}
