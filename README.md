@@ -1,6 +1,6 @@
 # Dog Park Locator
 
-Live demo [here](https://geraldbcastillo.github.io/and-chill)
+Live demo [here](https://geraldbcastillo.github.io/dog-parks/)
 
 In case it isn't painfully opvious from my [portfolio](https://geraldbcastillo.com), most of my life revolves around my dog.
 Because of this, I thought a fun project to do would be to build a dog park locator.
